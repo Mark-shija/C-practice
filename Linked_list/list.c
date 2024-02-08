@@ -29,10 +29,16 @@ int main()
 	chest -> number = 30;
 	chest -> link = NULL;
 	neck -> link = chest;
+/* addinng new node to the beggining of the list */
+
+	struct node *ptr = malloc(sizeof(struct node));
+	ptr -> number = 100;
+	ptr -> link = head;
+
 
 	if (head != NULL)
 	{
-		printf("%d %d %d\n", head -> number, neck -> number, chest -> number);
+		printf("%d %d %d %d\n", ptr -> number, head -> number, neck -> number, chest -> number);
 	}
 	else
 	{
